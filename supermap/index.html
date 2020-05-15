@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
+  <link rel="stylesheet" href="http://iclient.supermap.io/dist/leaflet/iclient9-leaflet.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
+  <script type="text/javascript" src="http://iclient.supermap.io/dist/leaflet/iclient9-leaflet.js"></script>
+  
+  <title></title>
+  <style>
+  html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #map { 
+    position: relative;
+    height: 100%; 
+  }
+  #controlBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+  }
+  #input { 
+    display: none; 
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div id="map">  
+  </div>
+  <input type="button" value="<<" id="controlBtn" onclick="changeStatus()">
+  <div id="input">
+    <textarea rows="5" cols="50" name="text" id="text">例:  LINESTRING (114.3123096125275300 30.6506221395211790, 114.3162260542326400 30.6455982758722170) POINT(114.3123096125275300 30.6506221395211790)</textarea>
+    <input type="button" value="开始绘制" onclick="draw()"></input>
+  </div>
+  
+</body>
+<script src="index.js"></script>
+</html>
